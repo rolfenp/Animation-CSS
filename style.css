@@ -1,0 +1,254 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* BACKGROUND */
+body {
+    background-image: url(gräshav.png);
+    background-repeat: no-repeat;
+    animation: b-move 40s infinite linear;
+    font-family: sans-serif;
+    
+}
+
+/* SPACESHIP */                       
+.ship {                               
+    position: absolute;
+    height: 200px;
+    opacity: 0;   
+}
+/* SPACESHIP TALK */
+.SStalk {                   
+    position: absolute;
+    height: 50px;
+    width: 100px;
+    background-color: rgba(255, 255, 255, 0);
+    border-radius: 20px;
+    text-align: center;
+    padding: 14px;
+    font-weight: 900;
+    opacity: 0;  
+}
+/* MISSILE */
+.missile {                 
+    position: absolute;
+    height: 10px;
+    width: 40px;
+    border-radius: 5px;
+    background-color: red;
+    opacity: 0;    
+}
+/* DEMON */  
+.demon {                    
+    position: absolute;
+    height: 200px;
+    width: 200px;
+    opacity: 0;  
+}
+/* DEMON TALK 1 */
+.talkbubble {
+    position: absolute;
+    height: 70px;
+    width: 200px;
+    background-color: rgba(255, 255, 255, 0);
+    border-radius: 30px;
+    text-align: center;
+    padding: 25px;
+    font-weight: 900;
+    opacity: 0; 
+}
+/* DEMON TALK 2 */
+.talkbubble2 {
+    position: absolute;
+    height: 70px;
+    width: 200px;
+    background-color: rgba(255, 255, 255, 0);
+    border-radius: 30px;
+    text-align: center;
+    padding: 25px;
+    font-weight: 900;
+    opacity: 0;  
+}
+
+/* END SCREEN */
+.end {
+    position: absolute;
+    width: 700px;
+    opacity: 0;
+}
+/* BUTTON */
+/* -Yes the whole screen is a button */
+.button {                   
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(221, 39, 39, 0);
+    border: 0;
+    color:rgb(255, 255, 255);
+    z-index: 500;
+    cursor: pointer; 
+}
+
+
+/* SPACESHIP ENTRANCE */
+.s-appear {animation: s-enter 25s 4s linear;}
+/* SPACESHIP TALK 1 */
+.s-talk {animation: s-talk 1.5s 19s linear;}
+/* SHOOT MISSILE */
+.shoot {
+    animation: shoot 0.5s 13s linear; 
+    animation-iteration-count: 3;
+}
+
+/* DEMON ENTRANCE */
+.d-appear {animation: d-enter 23s  linear forwards;}
+/* DEMON TALK 1 */
+.d-talk {animation: d-talk 3s 4s linear;}
+/* DEMON TALK 2 */
+.d-talk2 {animation: d-talk2 3s 9s ease-out;}
+
+/* END */
+.endappear {animation: endappear 2s 22.5s ease-in-out forwards;}
+
+
+/* BACKGROUND */
+@keyframes b-move { 
+    100% {
+        background-position: top right;}
+  }
+/* SPACESHIP ENTER */
+@keyframes s-enter { 
+    0% {
+        top: 30%;
+        left: -30%;
+        transform: rotate(-45deg);
+        transform:scale(0.1);
+        opacity: 1;
+    }
+    15% {
+        top: 30%;
+        left: 30%;
+        opacity: 1;
+        transform:scale(1.0);
+    }
+    65% {
+        transform: rotate(0deg);
+    }
+    70% {
+        top: 30%;
+        left: 30%;
+        opacity: 1;
+        transform: rotate(-15deg); 
+    }
+    80% {
+        top: -50%;
+        left: 90%;
+        opacity: 1;
+        transform: rotate(-15deg);
+    }
+    100% {
+        top: -100%;
+        left: 90%;
+        opacity: 1;
+        transform: rotate(0deg);
+        transform:scale(1.0);
+    }
+}
+/*SPACESHIP TALK 1 */
+@keyframes s-talk {
+    0% {
+        top: 30%;
+        left: 40%;
+        opacity: 1;
+    }
+    100% {
+        top: 30%;
+        left: 40%;
+        opacity: 1;
+    }
+}
+/* SHOOT MISSILE */
+@keyframes shoot {
+    0% {
+        top: 40%;
+        left: 40%;
+        opacity: 1;
+    }
+    100% {
+        top: 40%;
+        left: 60%;
+        opacity: 1;
+    }
+}
+/* DEMON ENTER */
+@keyframes d-enter { 
+    0% {
+        top: 0%;
+        left: 60%;
+        opacity: 0.0;
+    }
+    10% {
+        top: 30%;
+        left: 60%;
+        opacity: 1;
+    }
+    66%{
+        transform: rotate(0deg) scale(1.0);
+    }
+    78% {
+        top: 30%;
+        left: 60%;
+        opacity: 1;
+        transform: rotate(1080deg) scale(0.0);
+    }
+    100% {
+        transform: scale(0.0);
+    }
+}
+/*DEMON TALK 1 */
+@keyframes d-talk { 
+    0% {
+        opacity: 1;
+        top: 20%;
+        left: 70%;
+    }
+    99.9% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        top: 20%;
+        left: 70%;
+    }
+}
+/*DEMON TALK 2 */
+@keyframes d-talk2 { 
+    0% {
+        opacity: 1;
+        top: 20%;
+        left: 60%;
+    }
+    99.9% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        top: 20%;
+        left: 60%;
+    }
+}
+/* END */
+@keyframes endappear {
+    0% {
+        opacity: 0.0;
+        top: 30%;
+        left: 32%
+    }
+    100% {
+        opacity: 1;
+        top: 30%;
+        left: 32%
+    }
+}
+

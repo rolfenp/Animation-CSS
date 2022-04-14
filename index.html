@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Isak Animation</title>
+</head>
+<body>
+
+    <!-- RUN ANIMATION BUTTON -->
+    <button class="button" onclick='Run()'></button>
+    
+    <!-- SPACESHIP GIF -->
+    <img class="ship" src="gulraket2.gif">  
+    <!-- DEMON GIF -->
+    <img class="demon" src="cacod.gif">      
+    <!-- END SCRREN PNG -->
+    <img class="end" src="end.png">          
+    
+    <!-- SPACESHIP TALK -->
+    <div class="SStalk"><p>lel</p></div>
+    <!-- SPACESHIP MISSILE -->
+    <div class="missile"></div>
+
+    <!-- DEMON TALK -->
+    <div class="talkbubble"><p>*evil laugh*</p></div>
+    <!-- DEMON TALK 2 -->
+    <div class="talkbubble2"><p>?!?!?!?</p></div>
+
+    
+
+<script>
+   
+        /* RUN ANIMATION FUNCTION */
+    function Run() {
+
+
+        // SPACESHIP ENTRANCE
+        const ship = document.querySelector('.ship');
+        ship.classList.add('s-appear');
+        // SPACESHIP TALK 1
+        const SStalk = document.querySelector('.SStalk');
+        SStalk.classList.add('s-talk');
+        // SHOOT MISSILE
+        const missile = document.querySelector('.missile')
+        missile.classList.add('shoot')
+
+
+        // DEMON ENTRANCE
+        const demon = document.querySelector('.demon');
+        demon.classList.add('d-appear');
+        // DEMON TALK 1
+        const talkbubble = document.querySelector('.talkbubble'); 
+        talkbubble.classList.add('d-talk');
+        // DEMON TALK 2
+        const talkbubble2 = document.querySelector('.talkbubble2'); 
+        talkbubble2.classList.add('d-talk2');
+
+        
+        // END SCREEN
+        const end = document.querySelector('.end');
+        end.classList.add('endappear');
+    }
+</script>
+</body>
+</html>
